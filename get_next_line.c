@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hfuki <hfuki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 15:58:20 by hfuki             #+#    #+#             */
-/*   Updated: 2025/06/16 14:59:41 by marvin           ###   ########.fr       */
+/*   Updated: 2025/06/24 15:16:07 by hfuki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,28 +98,3 @@ char	*get_next_line(int fd)
 	line = read_manage_rem(&rem, buf, fd);
 	return (line);
 }
-
-// #include <fcntl.h>
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	int		fd;
-// 	char	*line;
-
-// 	fd = open("test.txt", O_RDONLY);
-// 	if (fd < 0)
-// 	{
-// 		perror("Failed to open file");
-// 		return (1);
-// 	}
-// 	// while ((line = get_next_line(fd)) != NULL)
-// 	// {
-// 	// 	printf("%s", line);  // 改行は行に含まれている
-// 	// 	free(line);          // 毎回freeする
-// 	// }
-// 	line = get_next_line(2);
-// 			printf("%s", line);  // 改行は行に含まれている
-// 		free(line);
-// 	close(fd);
-// 	return (0);
-// }
